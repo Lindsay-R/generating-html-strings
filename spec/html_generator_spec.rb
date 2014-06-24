@@ -2,12 +2,12 @@ require "spec_helper"
 
 describe HTMLGenerator do
   def html_generator
-    HTMLGenerator.new
+    HTMLGenerator.new  #creating a new instance
   end
 
   describe "#section" do
     it "returns a string of html that has a section containing the text" do
-      section_html = html_generator.section("this is the body of a section")
+      section_html = html_generator.section("this is the body of a section")  #".section" is calling the instance method we made in the "html_generator" class
 
       expect(section_html).to eq("<section>this is the body of a section</section>")
 
