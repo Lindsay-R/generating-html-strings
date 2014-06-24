@@ -10,12 +10,14 @@ describe HTMLGenerator do
       section_html = html_generator.section("this is the body of a section")
 
       expect(section_html).to eq("<section>this is the body of a section</section>")
+
+      section_html = html_generator.section("new text section")
+      expect(section_html).to eq("<section>new text section</section>")
     end
   end
 
   describe "#unordered_list" do
     it "returns a string of html that contains the list" do
-      skip
       list_html = html_generator.unordered_list(["item 1", "item 2", "item 3"])
 
       expect(list_html).to eq("<ul><li>item 1</li><li>item 2</li><li>item 3</li></ul>")
@@ -24,7 +26,7 @@ describe HTMLGenerator do
 
   describe "#button" do
     it "returns a string of html that has a button with text" do
-      skip
+
       button_html = html_generator.button("this is button text")
 
       expect(button_html).to eq("<button>this is button text</button>")
